@@ -1,0 +1,25 @@
+package com.nisha.week7;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController {
+
+    @RequestMapping(value = "/student", method = RequestMethod.GET)
+    public Student create() {
+        Student s1 = new Student();
+        
+        s1.setStudentID(44);
+        s1.setFname("Nisha");
+        s1.setLname("Nisha");
+        s1.setPhone("748-293-0589");
+        s1.setDOB("2000-05-15");
+        s1.setAddress("38 Main St");
+        s1.setStreet("Main St");
+        s1.setCity("New York");
+        s1.setNo("456");
+        return s1;
+    }
+}
